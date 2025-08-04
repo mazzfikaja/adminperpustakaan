@@ -353,3 +353,213 @@ body {
 .table-hover tbody tr:hover {
     background-color: #f5f5f5;
 }
+
+body {
+    background-color: #f8f9fa; 
+    font-family: 'Quicksand', sans-serif;
+}
+
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.content-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.main-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 1rem 0;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.nav-button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s;
+}
+.nav-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.hero-section {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://png.pngtree.com/thumb_back/fh260/background/20230526/pngtree-an-old-bookcase-in-a-library-image_2642908.jpg');
+    background-size: 100%;
+    background-position: center;
+}
+.hero-content {
+    z-index: 2;
+}
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 600px;
+    opacity: 0.9;
+}
+
+.announcement-list {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.announcement-item {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.announcement-item strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.book-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.book-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+.book-card-img-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+.book-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.book-card-body {
+    padding: 1.25rem;
+}
+.book-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 0.5rem 0;
+}
+.book-card-author {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* === ACCORDION === */
+.custom-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.accordion-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.accordion-header {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+.accordion-header:hover {
+    background-color: #ecf0f1;
+}
+.accordion-header::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #3498db;
+    transition: transform 0.3s ease-in-out;
+}
+.accordion-header.active::after {
+    transform: rotate(45deg);
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+.accordion-content-inner {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: #34495e;
+    line-height: 1.7;
+}
+.accordion-content-inner ol, .accordion-content-inner ul {
+    padding-left: 1.5rem;
+}
+
+/* === FOOTER === */
+.main-footer {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}

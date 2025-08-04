@@ -11,7 +11,7 @@
     <main class="d-flex">
         <div class="sidebar d-flex flex-column flex-shrink-0 p-3">
              <a href="koleksi-buku.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-                <img src="assets/udb.png" class="bi me-2" height="32" alt="UDB Logo">
+                <img src="assets/logo.png" class="bi me-2" height="32" alt="UDB Logo">
                 <span class="fs-4">Perpustakaan</span>
             </a>
             <hr>
@@ -36,6 +36,8 @@
             </div>
         </div>
 
+        <div class="content"> 
+            <img src="assets/logo-trans.png" class="background-logo" alt="Background Logo">
 
             <div id="list-view">
                 <div class="d-flex justify-content-between align-items-center mb-4">
@@ -55,7 +57,7 @@
 
                 <div class="card filter-section mb-4">
                      <div class="input-group">
-                        <input type="text" class="form-control" id="search-nim-input" placeholder="Cari peminjaman berdasarkan NIM...">
+                        <input type="text" class="form-control" id="search-nim-input" placeholder="Cari peminjaman berdasarkan NIM..." onkeyup="handleSearchByNim()">
                         <button class="btn btn-outline-primary" type="button" onclick="handleSearchByNim()">Cari</button>
                     </div>
                 </div>
@@ -108,7 +110,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body" id="historyModalBody">
-                    </div>
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                 </div>
